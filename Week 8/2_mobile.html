@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Regular Expressions Example 1
+
+            Visit: https://regexr.com/
+            Must be 7 characters long and begin with 20
+        */
+
+        function validate() {
+            // accesses the value inside the text box with id="studentID"
+            var phone = document.getElementById("phone").value; 
+
+            // using the double forward slash creates a regex object (literal).
+            var regx = /^08[3-7][0-9]{7}$/; 
+            
+
+            // the test() method tests for a match in a string. Returns true or false
+            if (regx.test(phone)){
+                alert("Valid phone nimber")
+            }
+            else {
+                alert("Invalid phone number");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+        <label for="studentID" id="lblPhone">Irish phone number</label>
+        <input type="text" id="phone" placeholder="phone number"></form><br>
+
+        <br>
+
+        <button onclick="validate()" type="button">Submit</button>
+
+    
+</body>
+</html>

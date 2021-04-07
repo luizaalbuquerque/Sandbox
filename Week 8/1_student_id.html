@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Regular Expressions Example 1
+
+            Visit: https://regexr.com/
+            Must be 7 characters long and begin with 20
+
+            \d - match any digit (same as [0-9])
+            \w - match any word character (a-z, A-Z, 0-9 and _)
+            \s - match whitespace character (e.g. spaces and tabs)
+            \t - match a tab only
+
+        */
+
+        function validate() {
+            // accesses the value inside the text box with id="studentID"
+            var studentNumber = document.getElementById("studentID").value; 
+
+            // using the double forward slash creates a regex object (literal).
+            var regx1 = /20[0-9]{6}/; 
+            var regx = /[a-z A-Z]00/i;
+
+            // calling the constructor function 
+            // var regx = new RegExp("20", "i"); 
+            
+
+            // the test() method tests for a match in a string. Returns true or false
+            if (regx.test(studentNumber)){
+                alert("Valid student number")
+                document.getElementById('inValid').style.visibility = "hidden";
+                document.getElementById('Valid').style.visibility = "visible";
+            }
+            else {
+                alert("Invalid student number");
+                document.getElementById('Valid').style.visibility = "hidden";
+                document.getElementById('inValid').style.visibility = "visible";
+            }
+
+
+
+        }
+        
+    </script>
+</head>
+<body>
+        <label for="studentID" id="lblStudent">CCT student number</label>
+        <input type="text" id="studentID" placeholder="Student ID"></form><br>
+
+        <label id="inValid" style="color:red; visibility: hidden;">Invalid Student Number</label><br>
+        <label id="Valid" style="color:red; visibility: hidden;">Valid Student Number</label>
+        <br>
+
+        <button onclick="validate()" type="button">Submit</button>
+
+    
+</body>
+</html>

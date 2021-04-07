@@ -1,0 +1,14 @@
+body {
+    background-color :white;
+}
+
+.jumbotron {
+    background-image: url('https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_960_720.jpg');
+    color:beige;
+}
+
+.blue {
+    background-color: rgb(24, 9, 155);
+    color: white;
+    padding-bottom: 200px;
+}
