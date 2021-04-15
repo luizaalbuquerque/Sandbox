@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "John",
+        "email": "jsnel@cct.ie"
+
+    },
+    {
+        "id": 2, 
+        "name": "Ken",
+        "email": "ken@cct.ie"
+    },
+    {
+        "id": 3,
+        "name": "Amilcar",
+        "email": "amilcar@cct.ie"
+    }
+]
